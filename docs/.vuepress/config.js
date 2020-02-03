@@ -13,6 +13,7 @@ module.exports = {
 	title: "玉川鑫鑫", // 网站名称以及首页大字
 	description: "爱学习，爱代码，爱鑫鑫", // 首页简介
 	theme: "yur",
+	evergreen: true,
 	piano: true, //默认弹奏乐谱：小星星
 	locales: {
 		"/": {

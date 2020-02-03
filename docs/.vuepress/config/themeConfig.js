@@ -29,6 +29,7 @@ module.exports = {
 	nav: [
 		{ text: "JavaScript", link: "/JavaScript/" },
 		{ text: "CSS", link: "/css/" },
+		{ text: "MarkDown", link: "/markdown/" },
 		{ text: "其它", link: "/other/" },
 	],
 	/**

@@ -39,7 +39,7 @@ git add -A
 # 提交
 git commit -m deploy
 
-# 强制推送到 cnguu.github.io 仓库的 master 分支
+# 强制推送到 name.github.io 仓库的 master 分支
 git push -f git@github.com:UESTCzhouyuchuan/UESTCzhouyuchuan.github.io.git master
 
 # 多仓库部署开始 ------
