@@ -16,6 +16,10 @@ module.exports = {
 	password: "yulovexin", //默认密码
 	about,
 	nameplate,
+	curtain: {
+		tip: "页面准备中...", // 提示语
+		textShadow: "#e91e63", // 文字阴影颜色
+	},
 	bannerButtons: [
 		// 首页按钮，type 默认：default，可选：primary dashed danger link
 		{ text: "阅读博文", link: "/posts/?page=1&pageSize=12", type: "primary" },

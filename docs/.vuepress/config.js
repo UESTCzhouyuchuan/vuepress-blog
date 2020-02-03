@@ -9,6 +9,7 @@ const themeConfig = require("./config/themeConfig.js");
 const head = require("./config/head.js");
 module.exports = {
 	base: "/",
+	dest: "dist",
 	title: "玉川鑫鑫", // 网站名称以及首页大字
 	description: "爱学习，爱代码，爱鑫鑫", // 首页简介
 	theme: "yur",
@@ -17,10 +18,6 @@ module.exports = {
 		"/": {
 			lang: "zh-CN", // 只支持中文
 		},
-	},
-	curtain: {
-		tip: "页面准备中...", // 提示语
-		textShadow: "#e91e63", // 文字阴影颜色
 	},
 	markdown: {
 		lineNumbers: true, // 开启行号（关闭无呼吸灯特效）
