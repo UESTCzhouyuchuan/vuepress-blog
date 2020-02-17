@@ -13,22 +13,23 @@ set -e
 
 # 编译
 # package.json 中需要有这一句："build": "vuepress build docs"
-# npm run build
+npm run build
 
-# 删除 dist_temp 文件夹
-rm -fr dist_temp
+# 先删除dist_push目录下文件
+cd dist_push
+rm -rf `ls | grep -v ".git"`
+cd ..
+# 复制 dist 文件夹到 dist_push 文件夹
+cp -rf dist/* dist_push
 
-# 复制 dist 文件夹到 dist_temp 文件夹
-cp -ir dist dist_temp
+# 复制 README.md 文件到 dist_push 文件夹
+cp -f README.md dist_push
 
-# 复制 README.md 文件到 dist_temp 文件夹
-cp -i README.md dist_temp
+# 进入 dist_push 目录
+cd dist_push
 
-# 进入 dist_temp 目录
-cd dist_temp
-
-# 新建 CNAME 文件，并写入 gleehub.com 域名
-echo blog.yulovexin.xyz > CNAME
+# 新建 CNAME 文件，并写入 域名
+echo -e blog.yulovexin.xyz > CNAME
 
 # 初始化仓库
 git init
@@ -68,4 +69,3 @@ cd ../
 rm -fr dist_temp
 
 # 结束
-cd -

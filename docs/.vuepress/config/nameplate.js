@@ -1,5 +1,5 @@
-module.exports = {
-	width: "86px", // 长度
+let other = {
+	width: "120px", // 长度
 	height: "36px", // 高度
 	text: [
 		// css 属性
@@ -84,4 +84,8 @@ module.exports = {
 			},
 		},
 	],
+};
+module.exports = {
+	title: "玉川的BLOG",
+	...other,
 };

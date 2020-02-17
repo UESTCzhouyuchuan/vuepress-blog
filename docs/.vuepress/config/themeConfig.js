@@ -1,40 +1,30 @@
-/**
- * 获得自我介绍
- */
-const about = require("./about.js");
-/**
- * 定制标识牌
- */
+// 定制标识牌
 const nameplate = require("./nameplate.js");
+
+//静态信息
+const locales = require("./locales.js");
+
+// 友链
+const links = require("./links.js");
+
+// 页脚
+const footer = require("./footer.js");
+
 module.exports = {
-	site: "https://myhoney.club", // 站点地址
-	logo: "/20200201/logo.png", // 站点 Logo
-	banner: "/20200201/banner.png", // 首页封面，固定宽高比例：482x500
+	lang: "zh-CN",
+	site: "https://blog.yulovexin.xyz",
+	logo: "/static/logo.png", // 站点 Logo
 	author: "周玉川", // 博主名称
 	authorLink: "https://github.com/UESTCzhouyuchuan/", // 博主名称跳转链接
-	timeline: true,
-	password: "yulovexin", //默认密码
-	about,
-	nameplate,
-	curtain: {
-		tip: "页面准备中...", // 提示语
-		textShadow: "#e91e63", // 文字阴影颜色
+	social: {
+		github: "https://github.com/UESTCzhouyuchuan/",
+		qq: "tencent://message/?uin=1738733078",
 	},
-	bannerButtons: [
-		// 首页按钮，type 默认：default，可选：primary dashed danger link
-		{ text: "阅读博文", link: "/posts/?page=1&pageSize=12", type: "primary" },
-		{ text: "了解博主", link: "/about", type: "default" },
-	],
-	notFound: "/20200201/NotFound.b5c9b223.jpg", // 404 页面背景图片
-	nav: [
-		{ text: "JavaScript", link: "/JavaScript/" },
-		{ text: "CSS", link: "/css/" },
-		{ text: "MarkDown", link: "/markdown/" },
-		{ text: "其它", link: "/other/" },
-	],
-	/**
-	 * 首页打字特效
-	 */
+	banner: "/static/banner.png", // 首页封面，固定宽高比例：482x500
+	timeline: true, // 开启时间线
+	about: true,
+	avatar: "/static/sleep_girl.jpg",
+	// 首页打字特效
 	ityped: {
 		typeSpeed: 300, // 正常速度
 		backSpeed: 200, // 反向速度
@@ -46,65 +36,85 @@ module.exports = {
 		disableBackTyping: false, // 禁用反向输入
 		cursorChar: "丨", // 指针字符
 	},
-	// 乐动标签云
-	piano: false,
-	/**
-	 * 设置友链
-	 */
-	link: {
-		banner: "/20200201/summer-solstice-strawberry-moon.gif", // 封面图
-		blog: [
-			{
-				title: "凉风有信", // 站点名称
-				subtitle: "责难无以成事", // 站点描述
-				link: "https://gleehub.com/", // 站点网址
-				logo: "https://static.xmt.cn/cc50c217cbe342ce951324583f2c6139.png", // 头像或者 Logo
-				color: "#39c5bb", // 主题色
-			},
-			{
-				title: "阿业战记",
-				subtitle: "提升码农亩产，掰直码农方向",
-				link: "https://eeee.im/",
-				logo: "https://eeee.im/avatar.jpg",
-				color: "#3c67bd",
-			},
-		],
+	post: {},
+	search: {
+		type: "default",
+		size: 10,
 	},
-	/**
-	 * 设置页脚
-	 */
-	footer: [
-		[
-			// 推荐资源
-			{
-				title: "Yur Tool", // 标题
-				subtitle: "VuePress Yur 脚手架", // 描述
-				link: "https://github.com/ioim/vuepress-theme-yur-cli", // 跳转链接
-			},
-		],
-		[
-			// 相关信息
-			{
-				title: "Github", // 标题
-				link: "https://github.com/UESTCzhouyuchaun/", // 跳转链接
-				type: "github", // 图标，这里获取：https://vue.ant.design/components/icon-cn/
-				theme: "twoTone", // 图标类型，可选：filled（实心）丨outlined（默认：描线）丨twoTone（双色）
-			},
-			{
-				// 根据示例，继续添加
-			},
-		],
-		[
-			// 其它
-			{
-				title: "uestczhouyuchuan@163.com", // 标题
-				link: "mailto:uestczhouyuchuan@163.com", // 跳转链接
-				type: "mail", // 图标，这里获取：https://vue.ant.design/components/icon-cn/
-				theme: "outlined", // 图标类型，可选：filled（实心）丨outlined（默认：描线）丨twoTone（双色）
-			},
-			{
-				// 根据示例，继续添加
-			},
-		],
+	reward: ["/static/zifubao.jpg", "/static/weixin.jpg"],
+	links,
+	plugins: [
+		"@vuepress/pwa",
+		{
+			serviceWorker: true,
+			updatePopup: true,
+		},
 	],
+	"zh-CN": {
+		locales,
+		navs: [
+			{ text: "JavaScript", link: "/javascript/" },
+			{ text: "CSS", link: "/css/" },
+			{ text: "MarkDown", link: "/markdown/" },
+			{ text: "其它", link: "/other/" },
+		],
+		nameplate,
+		buttons: [
+			// 首页按钮，type 默认：default，可选：primary dashed danger link
+			{ text: "阅读列表", link: "/posts/", type: "primary" },
+			{ text: "了解博主", link: "/about.html", type: "default" },
+		],
+		footer,
+	},
+	en: {
+		locales: {
+			title: "Stars so bright",
+			description: "Writing life with you",
+		},
+		navs: [
+			{
+				text: "One",
+				link: "/one/",
+			},
+			{
+				text: "Two",
+				link: "/two/",
+			},
+		],
+		nameplate: {
+			title: "Yur",
+		},
+		buttons: [
+			{ text: "Read", link: "/posts/", type: "primary" },
+			{ text: "About", link: "/about.html", type: "default" },
+		],
+		footer: {
+			// icon: '/20171231/footer.png',
+			one: [
+				{
+					title: "Yur",
+					subtitle: "VuePress Theme",
+					link: "https://github.com/cnguu/vuepress-theme-yur",
+				},
+			],
+			two: [
+				{
+					title: "Hosted On GitHub",
+					link: "https://github.com/",
+					type: "cloud",
+					theme: "filled",
+				},
+			],
+			three: [
+				{
+					title: "Gitter",
+					link:
+						"https://gitter.im/vuepress-theme/yur?utm_source=share-link&utm_medium=link&utm_campaign=share-link",
+					type: "message",
+					theme: "outlined",
+				},
+			],
+		},
+	},
+	// notFound: "/static/NotFound.b5c9b223.jpg", // 404 页面背景图片
 };

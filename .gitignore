@@ -3,5 +3,6 @@
 *.log
 node_modules
 dist
+dist_push
 yarn.lock
 package-lock.json

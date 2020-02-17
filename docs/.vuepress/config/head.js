@@ -12,11 +12,12 @@ module.exports = [
 		"meta",
 		{
 			name: "keywords",
-			content: "UESTCzhouyuchuan,yulovexin.xyz,玉川鑫鑫,博客",
+			content: "UESTCzhouyuchuan,blog.yulovexin.xyz,玉川鑫鑫,博客",
 		},
 	],
 	["meta", { name: "theme-color", content: "#3c67bd" }],
 	["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
 	["meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }],
 	["meta", { name: "msapplication-TileColor", content: "#000000" }],
+	["link", { rel: "icon", href: "/static/logo.png" }],
 ];

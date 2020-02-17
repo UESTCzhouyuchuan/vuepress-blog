@@ -12,12 +12,12 @@ meta:
 
     content: markdown
 
-date: 2020-02-03
+created: 2020-02-03
 
-update_date: 2020-02-03
+updated: 2020-02-03
 
 tags:
-  - markdown
+  - MarkDown
 
 banner: /20200203/ginkgoLeaf.png
 ---
