@@ -143,9 +143,9 @@ tags:
 ## 代码块
 
 ```js {1,3}
-console.log("VuePress");
-console.log("Theme");
-console.log("Yur");
+console.log('VuePress');
+console.log('Theme');
+console.log('Yur');
 ```
 
 ## 引用

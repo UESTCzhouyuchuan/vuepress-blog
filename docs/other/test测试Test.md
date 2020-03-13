@@ -11,8 +11,8 @@ meta:
 
 created: 2020-02-01
 updated: 2020-02-01
-copyright: "禁止转载"
-password: "123456"
+copyright: '禁止转载'
+password: '123456'
 tags:
   - test
 
