@@ -1,5 +1,5 @@
 // 插件
-const TerserPlugin = require('terser-webpack-plugin');
+// const TerserPlugin = require('terser-webpack-plugin');
 
 // 头部配置
 const head = require('./config/head.js');
@@ -20,19 +20,19 @@ module.exports = {
   markdown,
   head,
   themeConfig,
-  extraWatchFiles: ['/docs/.vuepress/config.js', '/docs/.vuepress/config/'],
+  extraWatchFiles: ['/docs/.vuepress/config.js', '/docs/.vuepress/config/**'],
   plugins: ['@vuepress/pwa', '@vuepress/nprogress'],
   configureWebpack: {
     plugins: [],
-    optimization: {
-      minimize: true,
-      minimizer: [
-        new TerserPlugin({
-          chunkFilter: () => true,
-          cache: '/cache',
-        }),
-      ],
-    },
+    // optimization: {
+    //   minimize: true,
+    //   minimizer: [
+    //     new TerserPlugin({
+    //       chunkFilter: () => true,
+    //       cache: '/cache',
+    //     }),
+    //   ],
+    // },
     resolve: {
       alias: {
         '@public': './.vuepress/public/',

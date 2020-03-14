@@ -6,7 +6,7 @@ module.exports = [
       {
         title: '凉风有信', // 站点名称
         subtitle: '责难无以成事', // 站点描述
-        link: 'https://gleehub.com/', // 站点网址
+        link: 'https://blog.cnguu.cn/', // 站点网址
         logo: 'https://static.xmt.cn/cc50c217cbe342ce951324583f2c6139.png', // 头像或者 Logo
         color: '#39c5bb', // 主题色
       },
@@ -21,7 +21,7 @@ module.exports = [
         title: '韩嘉兴',
         subtitle: '韩嘉兴的Blog',
         link: 'https://hanjiaxing521.github.io/',
-        logo: '',
+        logo: 'https://avatars0.githubusercontent.com/u/44097132?s=400&v=4',
         color: '#366666',
       },
     ],

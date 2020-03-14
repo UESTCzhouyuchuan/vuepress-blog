@@ -12,8 +12,8 @@ const footer = require('./footer.js');
 
 module.exports = {
   lang: 'zh-CN',
-  logo: '/static/logo.png',
-  avatar: '/static/sleep_girl.jpg', // 头像
+  logo: '/static/blog.png',
+  avatar: '/static/lovely-girl.jpg', // 头像
   author: '周玉川', // 博主名称
   authorLink: 'https://github.com/UESTCzhouyuchuan/', // 博主名称跳转链接
   social: {

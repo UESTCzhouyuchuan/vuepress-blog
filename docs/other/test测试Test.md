@@ -16,7 +16,7 @@ password: '123456'
 tags:
   - test
 
-banner: /static/sleep_girl.jpg
+banner: /static/sleep-girl.jpg
 ---
 
 ## TEST
